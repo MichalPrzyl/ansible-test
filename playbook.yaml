@@ -1,0 +1,15 @@
+- name: Testowy playbook lokalny
+  hosts: local
+  tasks:
+    - name: Stwórz plik w /tmp/
+      copy:
+        content: "Druga wersja pliku\n"
+        dest: /tmp/ansible-test.txt
+
+- name: Drugi job
+  hosts: local
+  tasks:
+    - name: Task pierwszy
+      copy:
+        content: "Drugi job???\n"
+        dest: /tmp/mp-drugi.txt
