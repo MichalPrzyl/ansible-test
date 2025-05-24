@@ -13,3 +13,11 @@
       copy:
         content: "Drugi job???\n"
         dest: /tmp/mp-drugi.txt
+
+- name: Trzeci job
+  hosts: local
+  tasks:
+    - name: Task trzeci
+      copy:
+        content: "Trzeci chyba już job???\n"
+        dest: /tmp/mp-trzeci.txt
